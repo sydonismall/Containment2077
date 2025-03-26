@@ -1,28 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!21 &-7094060477630779826
+--- !u!21 &-5847637345259375638
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Font Material
   m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 69cea12a286df7e4ca618a9a42ef4723, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3450dc0ae2747c642b65f41eff9c61e2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _ColorMask: 15
     - _Stencil: 0
@@ -34,16 +39,17 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!128 &12800000
 Font:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GREYBOLD FONT FILE
+  m_Name: BLACKBOLD FONT FILE
   serializedVersion: 5
   m_LineSpacing: 80
-  m_DefaultMaterial: {fileID: -7094060477630779826}
+  m_DefaultMaterial: {fileID: -5847637345259375638}
   m_FontSize: 32
   m_Texture: {fileID: 0}
   m_AsciiStartOffset: 0
@@ -185,7 +191,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.546875
-      y: 0.2890625
+      y: 0.28125
       width: 0.046875
       height: 0.1015625
     vert:
@@ -201,7 +207,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.2890625
+      y: 0.28125
       width: 0.046875
       height: 0.1015625
     vert:
@@ -329,15 +335,15 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.921875
+      y: 0.9140625
       width: 0.0546875
-      height: 0.078125
+      height: 0.0859375
     vert:
       serializedVersion: 2
       x: 0
-      y: -44
+      y: -43
       width: 7
-      height: -10
+      height: -11
     advance: 8
     flipped: 0
   - serializedVersion: 2
@@ -345,7 +351,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.4921875
+      y: 0.484375
       width: 0.0546875
       height: 0.078125
     vert:
@@ -361,7 +367,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.578125
+      y: 0.5703125
       width: 0.0546875
       height: 0.078125
     vert:
@@ -377,7 +383,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.8359375
+      y: 0.828125
       width: 0.0546875
       height: 0.078125
     vert:
@@ -393,7 +399,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.6640625
+      y: 0.65625
       width: 0.0546875
       height: 0.078125
     vert:
@@ -409,7 +415,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.75
+      y: 0.7421875
       width: 0.0546875
       height: 0.078125
     vert:
@@ -488,8 +494,8 @@ Font:
     index: 59
     uv:
       serializedVersion: 2
-      x: 0.59375
-      y: 0.796875
+      x: 0.5546875
+      y: 0.484375
       width: 0.03125
       height: 0.078125
     vert:
@@ -537,7 +543,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.546875
-      y: 0.1171875
+      y: 0.109375
       width: 0.0390625
       height: 0.0703125
     vert:
@@ -1001,7 +1007,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.546875
-      y: 0.0234375
+      y: 0.015625
       width: 0.0390625
       height: 0.0859375
     vert:
@@ -1033,7 +1039,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.546875
-      y: 0.1953125
+      y: 0.1875
       width: 0.0390625
       height: 0.0859375
     vert:
@@ -1513,7 +1519,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.546875
-      y: 0.3984375
+      y: 0.390625
       width: 0.046875
       height: 0.0859375
     vert:
@@ -1529,7 +1535,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.59375
-      y: 0.703125
+      y: 0.7890625
       width: 0.0234375
       height: 0.0859375
     vert:
@@ -1545,7 +1551,7 @@ Font:
     uv:
       serializedVersion: 2
       x: 0.4921875
-      y: 0.3984375
+      y: 0.390625
       width: 0.046875
       height: 0.0859375
     vert:
