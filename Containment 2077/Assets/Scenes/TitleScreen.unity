@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166, y: 124.87}
+  m_AnchoredPosition: {x: -44, y: 30}
   m_SizeDelta: {x: 888.4331, y: 256.2672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881750176
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 73b72f645fe57dd4d8b44bbe48235c1d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8cd54e4bfb9676746886b7f32a9fe53d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
