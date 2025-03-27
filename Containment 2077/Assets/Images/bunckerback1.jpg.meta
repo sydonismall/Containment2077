@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8cd54e4bfb9676746886b7f32a9fe53d
+guid: c10d166cbdf1b2b43a25f49ee63d2daa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8292379504135779017
-    second: backnrgoryund_0
+      213: 6931799122315105316
+    second: bunckerback1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backnrgoryund_0
+      name: bunckerback1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 643
+        width: 630
         height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73dc141a6cc8bec80800000000000000
-      internalID: -8292379504135779017
+      spriteID: 424d4f35392b23060800000000000000
+      internalID: 6931799122315105316
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      backnrgoryund_0: -8292379504135779017
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
