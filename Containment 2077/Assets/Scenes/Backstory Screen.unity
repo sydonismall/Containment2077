@@ -562,7 +562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1352875982
 RectTransform:
   m_ObjectHideFlags: 0
@@ -602,7 +602,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\tIt\u2019s the year 2077, and Earth has been infiltrated by doppelganger
+    aliens with the ability to physically mimic humans. Their aim is to completely
+    erase the human race.\r\nYou are the Containment Services Officer of the last
+    apocalyptic shelter that protects humans from danger. Residents often go in and
+    out of the shelter for their individual career responsibilities. Your daily objective
+    is to determine person by person if the shelter gate should be unlocked for all
+    characters requesting entry. You must safely receive current shelter residents
+    and eliminate all aliens, who may take on the appearance of a familiar dweller
+    in order to wreck havoc inside the shelter.\r\n\tDoppelgangers always make mistakes
+    when cloning humans. They may mutate their appearance, omit or alter their fake
+    ID, explain inaccurate personal information, or be missing on the list of incoming
+    guests. Your responsibility is to check alibis for mistakes through inquiring
+    the character. If the alibis prove insufficient, you must make the choice to
+    eradicate the person.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
   m_sharedMaterial: {fileID: 3314272031996159314, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
