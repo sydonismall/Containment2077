@@ -601,8 +601,8 @@ MonoBehaviour:
     the character. If the alibis prove insufficient, you must make the choice to
     eradicate the person.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
-  m_sharedMaterial: {fileID: 4045402394860723369, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
+  m_sharedMaterial: {fileID: 3314272031996159314, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -946,8 +946,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PROLOGUE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
-  m_sharedMaterial: {fileID: 4045402394860723369, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
+  m_sharedMaterial: {fileID: 3314272031996159314, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

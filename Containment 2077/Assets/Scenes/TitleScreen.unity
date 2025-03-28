@@ -374,15 +374,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: '2077: Containment'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
-  m_sharedMaterial: {fileID: 4045402394860723369, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
+  m_sharedMaterial: {fileID: 3314272031996159314, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281882273
+  m_fontColor: {r: 0.6320754, g: 0.33705974, b: 0.21764861, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -644,8 +644,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
-  m_sharedMaterial: {fileID: 4045402394860723369, guid: d197c5cc8a0380d4eafcb3ed0caf8e2f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
+  m_sharedMaterial: {fileID: 3314272031996159314, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

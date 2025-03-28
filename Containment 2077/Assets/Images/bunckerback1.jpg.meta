@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bunckerback1_0: 6931799122315105316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
