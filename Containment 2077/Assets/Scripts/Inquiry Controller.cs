@@ -2,15 +2,46 @@ using UnityEngine;
 
 public class InquiryController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    void OnStartClickAskAppearance()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnStartClickAskMissingID()
     {
-        
+
+    }
+    void OnStartClickAskWrongID()
+    {
+
+    }
+    void OnStartClickAskPersonal()
+    {
+
+    }
+    void OnStartClickAskAlibi()
+    {
+
+
+    }
+    void OnStartClickAskX()
+    {
+
+
+    }
+    void OnStartClickCallHome()
+    {
+
+
+    }
+    void OnStartClickZoomList()
+    {
+
+
+    }
+    void OnStartClickXList()
+    {
+
+
     }
 }
