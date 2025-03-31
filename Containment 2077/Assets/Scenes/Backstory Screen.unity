@@ -341,7 +341,7 @@ MonoBehaviour:
     personal information, or be missing on the list of incoming guests. '
   - 'Your responsibility is to check alibis for mistakes through inquiring the character.
     If the alibis prove insufficient, you must make the choice to eradicate the person. '
-  textSpeed: 0.15
+  textSpeed: 0.05
 --- !u!114 &773754311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,10 +576,10 @@ RectTransform:
   m_Children:
   - {fileID: 2042890464}
   - {fileID: 1121625317}
-  - {fileID: 773754307}
   - {fileID: 1491767648}
   - {fileID: 1739275093}
   - {fileID: 540196557}
+  - {fileID: 773754307}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -684,10 +684,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.05
-  m_fontSizeBase: 40
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -464.10983, y: -65.23948, z: -456.9513, w: -61.62082}
+  m_margin: {x: -464.10983, y: 22.242569, z: -456.9513, w: -61.62082}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
