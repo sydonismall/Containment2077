@@ -4,19 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< Updated upstream
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
-    guid: c135a137f76cf68429e075a7fa0fe972
-  - enabled: 1
-    path: Assets/Scenes/Backstory Screen.unity
-    guid: 8a6a341e339d19c4aad36db849a8f79a
-  - enabled: 1
-    path: Assets/Scenes/Main Game.unity
-    guid: 890ced4ab623fe249a96e39a5f73561e
-=======
   m_Scenes: []
->>>>>>> Stashed changes
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
