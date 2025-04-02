@@ -3,10 +3,11 @@ using System;
 
 public class MainGame : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    bool doppelganger = false;
     void Start()
     {
         System.Random rnd = new System.Random();
+        int randomNum = rnd.Next(1, 4);
     }
 
     // Update is called once per frame
