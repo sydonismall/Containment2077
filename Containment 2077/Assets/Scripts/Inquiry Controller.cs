@@ -3,43 +3,43 @@ using UnityEngine;
 public class InquiryController : MonoBehaviour
 {
 
-    void OnStartClickAskAppearance()
+    public void OnStartClickAskAppearance()
     {
         
     }
-    void OnStartClickAskMissingID()
+    public void OnStartClickAskMissingID()
     {
 
     }
-    void OnStartClickAskWrongID()
+    public void OnStartClickAskWrongID()
     {
 
     }
-    void OnStartClickAskPersonal()
+    public void OnStartClickAskPersonal()
     {
 
     }
-    void OnStartClickAskAlibi()
-    {
-
-
-    }
-    void OnStartClickAskX()
+    public void OnStartClickAskAlibi()
     {
 
 
     }
-    void OnStartClickCallHome()
+    public void OnStartClickAskX()
     {
 
 
     }
-    void OnStartClickZoomList()
+    public void OnStartClickCallHome()
     {
 
 
     }
-    void OnStartClickXList()
+    public void OnStartClickZoomList()
+    {
+
+
+    }
+    public void OnStartClickXList()
     {
 
 
