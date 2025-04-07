@@ -3,14 +3,13 @@ using UnityEngine;
 public class InquiryListButtons : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject Panel;
 
-    // Update is called once per frame
-    void Update()
+    public void OpenTextBod()
     {
-        
+        if(Panel != null)
+        {
+            Panel.SetActive(true);
+        }
     }
 }
