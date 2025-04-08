@@ -22,7 +22,7 @@ public class isDoppelganger : MonoBehaviour
         System.Random rnd = new System.Random();
         if (doppVersion == 1) // appearance
         {
-            int whichAppear = rnd.Next(1, 5);
+            int whichAppear = rnd.Next(1, 2);
         }
         if (doppVersion == 2) // wrong ID
         {
