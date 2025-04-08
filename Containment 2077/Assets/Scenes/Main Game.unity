@@ -1012,7 +1012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235.39128, y: -140.7319}
+  m_AnchoredPosition: {x: -228.6, y: -145.54}
   m_SizeDelta: {x: 53.4009, y: 94.2114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788808639
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 960943863}
   - component: {fileID: 960943862}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Inquiry List Text Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1370,8 +1370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -232.1, y: -34.1503}
-  m_SizeDelta: {x: 64.3857, y: 68.3017}
+  m_AnchoredPosition: {x: -221.54242, y: -40.157013}
+  m_SizeDelta: {x: 60.3909, y: 80.315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038336953
 MonoBehaviour:
@@ -2190,7 +2190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290.32007, y: -103.76139}
+  m_AnchoredPosition: {x: -280.5, y: -109}
   m_SizeDelta: {x: 40.5386, y: 46.8936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816916749
