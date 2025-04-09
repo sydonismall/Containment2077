@@ -2,16 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class InquiryListButtons : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Text Textfield;
+    public TMP_Text dynamicTextbox;
+    private Coroutine typingCoroutine;
 
-
-    public void SetText(string text)
+    public void UpdateText(string text)
     {
-        Textfield.text = text;
+        if(typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(TypeText(text));
+    }
+
+    private IEnumerator TypeText(string newText)
+    {
+        dynamicTextbox.text = "";
+        foreach(char letter in newText)
+        {
+            dynamicTextbox.text += letter;
+            yield return new WaitForSeconds(0.05f);
+        }
+        typingCoroutine = null;
     }
 }
