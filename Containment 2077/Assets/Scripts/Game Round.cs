@@ -11,7 +11,9 @@ public class GameRound : MonoBehaviour
             List<Character> TodayList = new List<Character>();
             for (int i = 0; i < 4; i++)
             {
-
+                System.Random rnd = new System.Random();
+                int randChar = rnd.Next(1,9);
+                TodayList.Add(new Character(randChar));
             }
         }
     }
