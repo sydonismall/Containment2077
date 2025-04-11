@@ -46,7 +46,7 @@ public class Character : MonoBehaviour
             int whichAppear = rnd.Next(1, 2);
             if (whichAppear == 1)
             {
-                image = abblood.png;
+                image = "";
             }
         }
         if (doppVersion == 2) // wrong ID
