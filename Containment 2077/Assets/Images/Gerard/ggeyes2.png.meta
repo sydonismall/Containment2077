@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ggeyes2_0: 8465777408425781226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
