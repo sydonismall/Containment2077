@@ -10,8 +10,6 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
 
     private int index;
-
-    // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
