@@ -5,25 +5,23 @@ public class Character : MonoBehaviour
     int characterNum = 0;
     string image;
     string charName;
+    int doppelVersion;
     
     public Character(int characterNum)
     {
         this.characterNum = characterNum;
-        if (characterNum == 1)
-        {
-            charName = "Asher Bertham";
-            isDoppelganger();
-        }
-        // 1: Asher Bertham
-        // 2: Paul Daisy 
-        // 3: Caetlyn Valence
-        // 4: Aimee Mainfield
-        // 5: Lidia Trelew
-        // 6: Sydney Bantam
-        // 7: Jenessa Holly
-        // 8: Brian Griffith
-        // 9: Gerard Guerlain
-
+        if (characterNum == 1) { charName = "Asher Bertham"; }
+        if (characterNum == 2) { charName = "Paul Daisy"; }
+        if (characterNum == 3) { charName = "Caetlyn Valence"; }
+        if (characterNum == 4) { charName = "Aimee Mainfield"; }
+        if (characterNum == 5) { charName = "Lidia Trelew"; }
+        if (characterNum == 6) { charName = "Sydney Bantam"; }
+        if (characterNum == 7) { charName = "Jenessa Holly"; }
+        if (characterNum == 8) { charName = "Brian Griffith"; }
+        if (characterNum == 9) { charName = "Brian Griffith"; }
+        // doppvers 1 - 15: normal character
+        // 16: dopp appearance
+        // 17: 
     }
     public void isDoppelganger()
     {
