@@ -5,6 +5,7 @@ public class Character : MonoBehaviour
     int characterNum = 0;
     string image;
     string charName;
+    
     public Character(int characterNum)
     {
         this.characterNum = characterNum;

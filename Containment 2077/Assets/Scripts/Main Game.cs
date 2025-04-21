@@ -6,11 +6,7 @@ public class isDoppelganger : MonoBehaviour
     bool doppelganger = false;
     void Start()
     {
-<<<<<<< Updated upstream
-        
-=======
         System.Random rnd = new System.Random();
-        
         int randomNum = rnd.Next(1, 4);
         if (randomNum == 1)
         {
@@ -53,7 +49,6 @@ public class isDoppelganger : MonoBehaviour
 
         }
 
->>>>>>> Stashed changes
     }
     
 
