@@ -5,19 +5,15 @@ using TMPro;
 
 public class PhoneTooltip : MonoBehaviour
 {
-    public static PhoneTooltip _instance;
+    public string message;
 
-    public TextMeshProUGUI textComponent;
-
-    private void Awake()
+    private void OnMouseEnter()
     {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
+        ToolTipManager._instance.SetAndShowToolTip(message);
+    }
+
+    private void OnMouseExit()
+    {
+        ToolTipManager._instance.HideToolTip();
     }
 }
