@@ -597,8 +597,13 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
+=======
+  m_AnchoredPosition: {x: 60.200043, y: -27.12999}
+  m_SizeDelta: {x: 155.52063, y: 0}
+>>>>>>> parent of 4d1bb18... a
 =======
   m_AnchoredPosition: {x: 60.200043, y: -27.12999}
   m_SizeDelta: {x: 155.52063, y: 0}
@@ -1274,7 +1279,10 @@ GameObject:
   - component: {fileID: 788808640}
   - component: {fileID: 788808639}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 4d1bb18... a
   - component: {fileID: 788808644}
   - component: {fileID: 788808643}
   - component: {fileID: 788808642}
@@ -1401,9 +1409,12 @@ CanvasRenderer:
   m_GameObject: {fileID: 788808637}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &852224865
 GameObject:
 =======
+=======
+>>>>>>> parent of 4d1bb18... a
 --- !u!50 &788808642
 Rigidbody2D:
   serializedVersion: 5
@@ -1489,6 +1500,9 @@ RectTransform:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &788808644
+<<<<<<< HEAD
+>>>>>>> parent of 4d1bb18... a
+=======
 >>>>>>> parent of 4d1bb18... a
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,6 +1513,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 852224865}
 =======
   m_GameObject: {fileID: 788808637}
+<<<<<<< HEAD
+>>>>>>> parent of 4d1bb18... a
+=======
 >>>>>>> parent of 4d1bb18... a
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1556,6 +1573,9 @@ CanvasRenderer:
     y: 0
     width: 1
     height: 1
+<<<<<<< HEAD
+>>>>>>> parent of 4d1bb18... a
+=======
 >>>>>>> parent of 4d1bb18... a
 --- !u!1 &960943860
 GameObject:
