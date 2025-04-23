@@ -627,8 +627,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 60.200043, y: -27.12999}
   m_SizeDelta: {x: 155.52063, y: 0}
+=======
+  m_AnchoredPosition: {x: 63.5, y: -42.7}
+  m_SizeDelta: {x: 155.5206, y: 0}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291358467
 MonoBehaviour:
@@ -650,7 +655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Dial bunker or when doppelganger detected
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
   m_sharedMaterial: {fileID: 3314272031996159314, guid: 8afe4e6bce731374eab06183c23203a9, type: 2}
@@ -1294,8 +1299,11 @@ GameObject:
   - component: {fileID: 788808641}
   - component: {fileID: 788808645}
   - component: {fileID: 788808639}
+<<<<<<< Updated upstream
   - component: {fileID: 788808644}
   - component: {fileID: 788808643}
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 788808642}
   m_Layer: 5
   m_Name: Phone Button
@@ -1388,6 +1396,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788808637}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!50 &788808642
 Rigidbody2D:
   serializedVersion: 5
@@ -1462,12 +1471,16 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &788808644
+=======
+--- !u!114 &788808642
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788808637}
+<<<<<<< Updated upstream
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2945b57dec42fd14bae5d8399a1fc1c6, type: 3}
@@ -1501,6 +1514,14 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+=======
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2945b57dec42fd14bae5d8399a1fc1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverText: {fileID: 291358465}
+>>>>>>> Stashed changes
 --- !u!1 &960943860
 GameObject:
   m_ObjectHideFlags: 0
