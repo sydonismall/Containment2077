@@ -5,6 +5,11 @@ public class Character : MonoBehaviour
     int characterNum = 0;
     string image;
     string charName;
+<<<<<<< HEAD
+=======
+    public int doppelVersion;
+
+>>>>>>> parent of 142c52f... Revert "a"
     public Character(int characterNum)
     {
         this.characterNum = characterNum;
