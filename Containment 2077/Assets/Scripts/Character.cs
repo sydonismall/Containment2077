@@ -35,7 +35,11 @@ public class Character : MonoBehaviour
         // 19: today's list
         if (doppelVersion <= 10 || doppelVersion >= 15) { SetAppearanceDefault(characterNum); }
         if (doppelVersion >= 11 && doppelVersion <= 14) { SetAppearanceDoppel(characterNum, doppelVersion); }
-
+        if (doppelVersion == 15) { }
+        if (doppelVersion == 16) { }
+        if (doppelVersion == 17) { }
+        if (doppelVersion == 18) { } 
+        if (doppelVersion == 19) { } // dialogue + image
     }
 
     public void SetAppearanceDefault(int characterNum)
@@ -52,8 +56,7 @@ public class Character : MonoBehaviour
     }
     public void SetAppearanceDoppel(int characterNum, int doppelVersion)
     {
-        if (doppelVersion == 11)
-        {
+        if (doppelVersion == 11) {
             if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abeyes"); }
             if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdeyes"); }
             if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cveyes"); }
@@ -64,8 +67,7 @@ public class Character : MonoBehaviour
             if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgeyes"); }
             if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggeyes"); }
         }
-        if (doppelVersion == 12)
-        {
+        if (doppelVersion == 12) {
             if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abeyes2"); }
             if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdeyes2"); }
             if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cveyes2"); }
@@ -76,8 +78,7 @@ public class Character : MonoBehaviour
             if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgeyes2"); }
             if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggeyes2"); }
         }
-        if (doppelVersion == 13)
-        {
+        if (doppelVersion == 13) {
             if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abblood"); }
             if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdblood"); }
             if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cvblood"); }
@@ -88,8 +89,7 @@ public class Character : MonoBehaviour
             if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgblood"); }
             if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggblood"); }
         }
-        if (doppelVersion == 14)
-        {
+        if (doppelVersion == 14) {
             if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abwildcard"); }
             if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdwildcard"); }
             if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cvwildcard"); }
