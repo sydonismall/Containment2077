@@ -5,6 +5,7 @@ public class Character : MonoBehaviour
 {
     int characterNum;
     Image charImage;
+    Image IDImage;
     string charName;
     int doppelVersion;
 
