@@ -5,9 +5,9 @@ public class Character : MonoBehaviour
 {
     int characterNum;
     public Sprite charImage;
-    Image IDImage;
+    public Image IDImage;
     public string charName;
-    int doppelVersion;
+    public int doppelVersion;
 
     public Character(int characterNum)
     {
@@ -36,6 +36,7 @@ public class Character : MonoBehaviour
         // 19: today's list
         if (doppelVersion <= 10 || doppelVersion >= 15) { SetAppearanceDefault(characterNum); }
         if (doppelVersion >= 11 && doppelVersion <= 14) { SetAppearanceDoppel(characterNum, doppelVersion); }
+        if (doppelVersion != 15 && doppelVersion != 16) { SetIDDefault(characterNum); }
         if (doppelVersion == 15) { }
         if (doppelVersion == 16) { }
         if (doppelVersion == 17) { }
@@ -43,6 +44,11 @@ public class Character : MonoBehaviour
         if (doppelVersion == 19) { } // dialogue + image
     }
 
+    public void SetIDDefault(int characterNum)
+    {
+
+    }
+    
     public void SetAppearanceDefault(int characterNum)
     {
         if (characterNum == 1) { charImage = Resources.Load<Sprite>("abdefault"); }
