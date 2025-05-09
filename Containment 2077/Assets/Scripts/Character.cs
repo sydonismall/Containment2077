@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class Character : MonoBehaviour
 {
     int characterNum;
-    Image charImage;
+    public Sprite charImage;
     Image IDImage;
-    string charName;
+    public string charName;
     int doppelVersion;
 
     public Character(int characterNum)
@@ -45,61 +45,61 @@ public class Character : MonoBehaviour
 
     public void SetAppearanceDefault(int characterNum)
     {
-        if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abdefault"); }
-        if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pddefault"); }
-        if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cvdefault"); }
-        if (characterNum == 4) { charImage.sprite = Resources.Load<Sprite>("amdefault"); }
-        if (characterNum == 5) { charImage.sprite = Resources.Load<Sprite>("ltdefault"); }
-        if (characterNum == 6) { charImage.sprite = Resources.Load<Sprite>("sbdefault"); }
-        if (characterNum == 7) { charImage.sprite = Resources.Load<Sprite>("jhdefault"); }
-        if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgdefault"); }
-        if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggdefault"); }
+        if (characterNum == 1) { charImage = Resources.Load<Sprite>("abdefault"); }
+        if (characterNum == 2) { charImage = Resources.Load<Sprite>("pddefault"); }
+        if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvdefault"); }
+        if (characterNum == 4) { charImage = Resources.Load<Sprite>("amdefault"); }
+        if (characterNum == 5) { charImage = Resources.Load<Sprite>("ltdefault"); }
+        if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbdefault"); }
+        if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhdefault"); }
+        if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgdefault"); }
+        if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggdefault"); }
     }
     public void SetAppearanceDoppel(int characterNum, int doppelVersion)
     {
         if (doppelVersion == 11) {
-            if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abeyes"); }
-            if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdeyes"); }
-            if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cveyes"); }
-            if (characterNum == 4) { charImage.sprite = Resources.Load<Sprite>("ameyes"); }
-            if (characterNum == 5) { charImage.sprite = Resources.Load<Sprite>("lteyes"); }
-            if (characterNum == 6) { charImage.sprite = Resources.Load<Sprite>("sbeyes"); }
-            if (characterNum == 7) { charImage.sprite = Resources.Load<Sprite>("jheyes"); }
-            if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgeyes"); }
-            if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggeyes"); }
+            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abeyes"); }
+            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdeyes"); }
+            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cveyes"); }
+            if (characterNum == 4) { charImage = Resources.Load<Sprite>("ameyes"); }
+            if (characterNum == 5) { charImage = Resources.Load<Sprite>("lteyes"); }
+            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbeyes"); }
+            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jheyes"); }
+            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgeyes"); }
+            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggeyes"); }
         }
         if (doppelVersion == 12) {
-            if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abeyes2"); }
-            if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdeyes2"); }
-            if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cveyes2"); }
-            if (characterNum == 4) { charImage.sprite = Resources.Load<Sprite>("ameyes2"); }
-            if (characterNum == 5) { charImage.sprite = Resources.Load<Sprite>("lteyes2"); }
-            if (characterNum == 6) { charImage.sprite = Resources.Load<Sprite>("sbeyes2"); }
-            if (characterNum == 7) { charImage.sprite = Resources.Load<Sprite>("jheyes2"); }
-            if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgeyes2"); }
-            if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggeyes2"); }
+            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abeyes2"); }
+            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdeyes2"); }
+            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cveyes2"); }
+            if (characterNum == 4) { charImage = Resources.Load<Sprite>("ameyes2"); }
+            if (characterNum == 5) { charImage = Resources.Load<Sprite>("lteyes2"); }
+            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbeyes2"); }
+            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jheyes2"); }
+            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgeyes2"); }
+            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggeyes2"); }
         }
         if (doppelVersion == 13) {
-            if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abblood"); }
-            if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdblood"); }
-            if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cvblood"); }
-            if (characterNum == 4) { charImage.sprite = Resources.Load<Sprite>("amblood"); }
-            if (characterNum == 5) { charImage.sprite = Resources.Load<Sprite>("ltblood"); }
-            if (characterNum == 6) { charImage.sprite = Resources.Load<Sprite>("sbblood"); }
-            if (characterNum == 7) { charImage.sprite = Resources.Load<Sprite>("jhblood"); }
-            if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgblood"); }
-            if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggblood"); }
+            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abblood"); }
+            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdblood"); }
+            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvblood"); }
+            if (characterNum == 4) { charImage = Resources.Load<Sprite>("amblood"); }
+            if (characterNum == 5) { charImage = Resources.Load<Sprite>("ltblood"); }
+            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbblood"); }
+            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhblood"); }
+            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgblood"); }
+            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggblood"); }
         }
         if (doppelVersion == 14) {
-            if (characterNum == 1) { charImage.sprite = Resources.Load<Sprite>("abwildcard"); }
-            if (characterNum == 2) { charImage.sprite = Resources.Load<Sprite>("pdwildcard"); }
-            if (characterNum == 3) { charImage.sprite = Resources.Load<Sprite>("cvwildcard"); }
-            if (characterNum == 4) { charImage.sprite = Resources.Load<Sprite>("amwildcard"); }
-            if (characterNum == 5) { charImage.sprite = Resources.Load<Sprite>("ltwildcard"); }
-            if (characterNum == 6) { charImage.sprite = Resources.Load<Sprite>("sbwildcard"); }
-            if (characterNum == 7) { charImage.sprite = Resources.Load<Sprite>("jhwildcard"); }
-            if (characterNum == 8) { charImage.sprite = Resources.Load<Sprite>("bgwildcard"); }
-            if (characterNum == 9) { charImage.sprite = Resources.Load<Sprite>("ggwildcard"); }
+            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abwildcard"); }
+            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdwildcard"); }
+            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvwildcard"); }
+            if (characterNum == 4) { charImage = Resources.Load<Sprite>("amwildcard"); }
+            if (characterNum == 5) { charImage = Resources.Load<Sprite>("ltwildcard"); }
+            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbwildcard"); }
+            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhwildcard"); }
+            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgwildcard"); }
+            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggwildcard"); }
         }
     }
 }
