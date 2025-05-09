@@ -7,7 +7,10 @@ public class GameRound : MonoBehaviour
     public List<Character> TodayList;
     public int currentIndex;
     public GameObject personPrefab;
+    public GameObject idPrefab;
     public GameObject canvas;
+    private GameObject personObject;
+    private GameObject idObject;
     public void Start()
     {
         currentIndex = 0;
@@ -18,21 +21,31 @@ public class GameRound : MonoBehaviour
             int randChar = rnd.Next(1,9);
             TodayList.Add(new Character(randChar));
         }
-        print("CHARACTER LIST INITIALIZED");
-        print("PERSON 0 IS: " + TodayList[0].charName);
         spawnNextPerson();
     }
 
     public void spawnNextPerson()
     {
-        GameObject personObject = Instantiate(personPrefab);
-        print(TodayList[currentIndex].charImage);
+        personObject = Instantiate(personPrefab);
         personObject.GetComponent<Image>().sprite = TodayList[currentIndex].charImage;
+        if (TodayList[currentIndex].doppelVersion != 16)
+        {
+            idObject = Instantiate(idPrefab);
+            //personObject.GetComponent<Image>().sprite == TodayList[currentIndex].IDImage;
+        }
         personObject.transform.parent = canvas.transform;
         personObject.transform.position = new Vector3(500, 260, 0);
-        print("SPAWNED IN PERSON #: " + currentIndex);
         currentIndex++;
         
+    }
+    public void DespawnPerson()
+    {
+        Destroy(personObject);
+        Destroy(idObject);
+        if (currentIndex != 3)
+        {
+            spawnNextPerson();
+        }
     }
 
 }

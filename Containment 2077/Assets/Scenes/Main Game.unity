@@ -1747,9 +1747,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1753464585}
-        m_TargetAssemblyTypeName: CharacterDespawn, Assembly-CSharp
-        m_MethodName: Despawn
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: DespawnPerson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6146,7 +6146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcfaf81de86bbe4385455d811f9fc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charImage: {fileID: 2062100835}
+  charImage: {fileID: 0}
   IDimage: {fileID: 976111269}
 --- !u!114 &1753464586
 MonoBehaviour:
@@ -6163,6 +6163,7 @@ MonoBehaviour:
   TodayList: []
   currentIndex: 0
   personPrefab: {fileID: 7606775996669709178, guid: aaf2ba47e43263a4a9154eb6e47720c1, type: 3}
+  idPrefab: {fileID: 0}
   canvas: {fileID: 490268734}
 --- !u!1 &1816916747
 GameObject:
