@@ -28,13 +28,14 @@ public class GameRound : MonoBehaviour
     {
         personObject = Instantiate(personPrefab);
         personObject.GetComponent<Image>().sprite = TodayList[currentIndex].charImage;
-        if (TodayList[currentIndex].doppelVersion != 16)
-        {
-            idObject = Instantiate(idPrefab);
-            //personObject.GetComponent<Image>().sprite == TodayList[currentIndex].IDImage;
-        }
         personObject.transform.parent = canvas.transform;
         personObject.transform.position = new Vector3(500, 260, 0);
+
+        idObject = Instantiate(idPrefab);
+        idObject.GetComponent<Image>().sprite = TodayList[currentIndex].IDImage;
+        idObject.transform.parent = canvas.transform;
+        idObject.transform.position = new Vector3(500, 200, 0);
+
         currentIndex++;
         
     }

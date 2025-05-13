@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
 {
     int characterNum;
     public Sprite charImage;
-    public Image IDImage;
+    public Sprite IDImage;
     public string charName;
     public int doppelVersion;
 
@@ -37,8 +37,8 @@ public class Character : MonoBehaviour
         if (doppelVersion <= 10 || doppelVersion >= 15) { SetAppearanceDefault(characterNum); }
         if (doppelVersion >= 11 && doppelVersion <= 14) { SetAppearanceDoppel(characterNum, doppelVersion); }
         if (doppelVersion != 15 && doppelVersion != 16) { SetIDDefault(characterNum); }
-        if (doppelVersion == 15) { }
-        if (doppelVersion == 16) { }
+        if (doppelVersion == 15) { SetIDDoppel(characterNum); }
+        if (doppelVersion == 16) { IDImage = null; }
         if (doppelVersion == 17) { }
         if (doppelVersion == 18) { } 
         if (doppelVersion == 19) { } // dialogue + image
@@ -46,9 +46,29 @@ public class Character : MonoBehaviour
 
     public void SetIDDefault(int characterNum)
     {
-
+        if (characterNum == 1) { IDImage = Resources.Load<Sprite>("abid"); }
+        if (characterNum == 2) { IDImage = Resources.Load<Sprite>("pdid"); }
+        if (characterNum == 3) { IDImage = Resources.Load<Sprite>("cvid"); }
+        if (characterNum == 4) { IDImage = Resources.Load<Sprite>("amid"); }
+        if (characterNum == 5) { IDImage = Resources.Load<Sprite>("ltid"); }
+        if (characterNum == 6) { IDImage = Resources.Load<Sprite>("sbid"); }
+        if (characterNum == 7) { IDImage = Resources.Load<Sprite>("jhid"); }
+        if (characterNum == 8) { IDImage = Resources.Load<Sprite>("bgid"); }
+        if (characterNum == 9) { IDImage = Resources.Load<Sprite>("ggid"); }
     }
-    
+    public void SetIDDoppel(int characterNum)
+    {
+        if (characterNum == 1) { IDImage = Resources.Load<Sprite>("abwrongid"); }
+        if (characterNum == 2) { IDImage = Resources.Load<Sprite>("pdwrongid"); }
+        if (characterNum == 3) { IDImage = Resources.Load<Sprite>("cvwrongid"); }
+        if (characterNum == 4) { IDImage = Resources.Load<Sprite>("amwrongid"); }
+        if (characterNum == 5) { IDImage = Resources.Load<Sprite>("ltwrongid"); }
+        if (characterNum == 6) { IDImage = Resources.Load<Sprite>("sbwrongid"); }
+        if (characterNum == 7) { IDImage = Resources.Load<Sprite>("jhwrongid"); }
+        if (characterNum == 8) { IDImage = Resources.Load<Sprite>("bgwrongid"); }
+        if (characterNum == 9) { IDImage = Resources.Load<Sprite>("ggwrongid"); }
+    }
+
     public void SetAppearanceDefault(int characterNum)
     {
         if (characterNum == 1) { charImage = Resources.Load<Sprite>("abdefault"); }
