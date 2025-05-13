@@ -34,7 +34,7 @@ public class GameRound : MonoBehaviour
         idObject = Instantiate(idPrefab);
         idObject.GetComponent<Image>().sprite = TodayList[currentIndex].IDImage;
         idObject.transform.parent = canvas.transform;
-        idObject.transform.position = new Vector3(500, 200, 0);
+        idObject.transform.position = new Vector3(500, 50, 0);
 
         currentIndex++;
         
