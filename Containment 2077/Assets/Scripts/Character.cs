@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Character : MonoBehaviour
 {
@@ -8,6 +11,8 @@ public class Character : MonoBehaviour
     public Sprite IDImage;
     public string charName;
     public int doppelVersion;
+    public TMP_Text dynamicTextbox;
+    private Coroutine typingCoroutine;
 
     public Character(int characterNum)
     {
@@ -33,15 +38,15 @@ public class Character : MonoBehaviour
         // 16: missing ID
         // 17: personal
         // 18: alibi
-        // 19: today's list
+        // 19: file
         if (doppelVersion <= 10 || doppelVersion >= 15) { SetAppearanceDefault(characterNum); }
         if (doppelVersion >= 11 && doppelVersion <= 14) { SetAppearanceDoppel(characterNum, doppelVersion); }
         if (doppelVersion != 15 && doppelVersion != 16) { SetIDDefault(characterNum); }
         if (doppelVersion == 15) { SetIDDoppel(characterNum); }
         if (doppelVersion == 16) { IDImage = null; }
         if (doppelVersion == 17) { }
-        if (doppelVersion == 18) { } 
-        if (doppelVersion == 19) { } // dialogue + image
+        if (doppelVersion == 18) { }
+        if (doppelVersion == 19) { }
     }
 
     public void SetIDDefault(int characterNum)
@@ -83,7 +88,8 @@ public class Character : MonoBehaviour
     }
     public void SetAppearanceDoppel(int characterNum, int doppelVersion)
     {
-        if (doppelVersion == 11) {
+        if (doppelVersion == 11)
+        {
             if (characterNum == 1) { charImage = Resources.Load<Sprite>("abeyes"); }
             if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdeyes"); }
             if (characterNum == 3) { charImage = Resources.Load<Sprite>("cveyes"); }
@@ -94,7 +100,8 @@ public class Character : MonoBehaviour
             if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgeyes"); }
             if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggeyes"); }
         }
-        if (doppelVersion == 12) {
+        if (doppelVersion == 12)
+        {
             if (characterNum == 1) { charImage = Resources.Load<Sprite>("abeyes2"); }
             if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdeyes2"); }
             if (characterNum == 3) { charImage = Resources.Load<Sprite>("cveyes2"); }
@@ -105,7 +112,8 @@ public class Character : MonoBehaviour
             if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgeyes2"); }
             if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggeyes2"); }
         }
-        if (doppelVersion == 13) {
+        if (doppelVersion == 13)
+        {
             if (characterNum == 1) { charImage = Resources.Load<Sprite>("abblood"); }
             if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdblood"); }
             if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvblood"); }
@@ -116,7 +124,8 @@ public class Character : MonoBehaviour
             if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgblood"); }
             if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggblood"); }
         }
-        if (doppelVersion == 14) {
+        if (doppelVersion == 14)
+        {
             if (characterNum == 1) { charImage = Resources.Load<Sprite>("abwildcard"); }
             if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdwildcard"); }
             if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvwildcard"); }
@@ -126,6 +135,46 @@ public class Character : MonoBehaviour
             if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhwildcard"); }
             if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgwildcard"); }
             if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggwildcard"); }
+        }
+    }
+    public void UpdateAppearanceText(string text)
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+        typingCoroutine = StartCoroutine(TypeAppearanceText(text));
+    }
+
+    private IEnumerator TypeAppearanceText(string newText)
+    {
+        dynamicTextbox.text = "";
+        newText = changeAppearanceDialogue(doppelVersion);
+        foreach (char letter in newText)
+        {
+            dynamicTextbox.text += letter;
+            yield return new WaitForSeconds(0.05f);
+        }
+        typingCoroutine = null;
+    }
+
+    public string changeAppearanceDialogue(int doppelVersion)
+    {
+        if (doppelVersion == 11 || doppelVersion == 12)
+        {
+            return "Oh, my eyes? I just didn't sleep very well last night.";
+        }
+        else if (doppelVersion == 13)
+        {
+            return "Oh, it's all just tomato sauce!";
+        }
+        else if (doppelVersion == 14)
+        {
+            return "Uh oh, you caught me. You have to die now.";
+        }
+        else
+        {
+            return "What do you mean? There's nothing wrong with my appearance.";
         }
     }
 }
