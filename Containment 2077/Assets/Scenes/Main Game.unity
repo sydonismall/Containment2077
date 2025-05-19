@@ -952,9 +952,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252679595}
-        m_TargetAssemblyTypeName: InquiryListButtons, Assembly-CSharp
-        m_MethodName: UpdateText
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UpdateAlibiText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1083,9 +1083,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252679595}
-        m_TargetAssemblyTypeName: InquiryListButtons, Assembly-CSharp
-        m_MethodName: UpdateText
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UpdateMissingIDText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2269,7 +2269,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1753464586}
         m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
-        m_MethodName: DespawnPerson
+        m_MethodName: DialDespawnPerson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2888,9 +2888,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252679595}
-        m_TargetAssemblyTypeName: InquiryListButtons, Assembly-CSharp
-        m_MethodName: UpdateText
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UpdatePersonalText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3148,9 +3148,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252679595}
-        m_TargetAssemblyTypeName: InquiryListButtons, Assembly-CSharp
-        m_MethodName: UpdateText
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UpdateFileText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5747,7 +5747,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1090329489}
-        m_TargetAssemblyTypeName: BunkerFIlesOpen, Assembly-CSharp
+        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
         m_MethodName: OpenPanel
         m_Mode: 1
         m_Arguments:
@@ -6342,9 +6342,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252679595}
-        m_TargetAssemblyTypeName: InquiryListButtons, Assembly-CSharp
-        m_MethodName: UpdateText
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UpdateAppearanceText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7018,9 +7018,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252679595}
-        m_TargetAssemblyTypeName: InquiryListButtons, Assembly-CSharp
-        m_MethodName: UpdateText
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UpdateWrongIDText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8632,6 +8632,7 @@ GameObject:
   - component: {fileID: 1753464582}
   - component: {fileID: 1753464585}
   - component: {fileID: 1753464586}
+  - component: {fileID: 1753464587}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8791,6 +8792,29 @@ MonoBehaviour:
   personPrefab: {fileID: 7606775996669709178, guid: aaf2ba47e43263a4a9154eb6e47720c1, type: 3}
   idPrefab: {fileID: 7180756483885959314, guid: 66c999a80aca70f47bf19da67f33848d, type: 3}
   canvas: {fileID: 490268734}
+  dialogueText: {fileID: 1943711874}
+  doppelKilled: 0
+  doppelSurvived: 0
+  innoKilled: 0
+  innoSurvived: 0
+  dynamicTextbox: {fileID: 1943711874}
+--- !u!114 &1753464587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753464577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77027514b3605504bb2ecd82ad3c6e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterNum: 0
+  charImage: {fileID: 0}
+  IDImage: {fileID: 0}
+  charName: 
+  doppelVersion: 0
 --- !u!1 &1790532259
 GameObject:
   m_ObjectHideFlags: 0
@@ -9023,6 +9047,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1753464586}
+        m_TargetAssemblyTypeName: GameRound, Assembly-CSharp
+        m_MethodName: UnlockDespawnPerson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1816916750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9030,13 +9066,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816916747}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.16470589}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

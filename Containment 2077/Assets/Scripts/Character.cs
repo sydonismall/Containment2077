@@ -6,175 +6,209 @@ using TMPro;
 
 public class Character : MonoBehaviour
 {
-    int characterNum;
+    public int characterNum;
     public Sprite charImage;
     public Sprite IDImage;
     public string charName;
     public int doppelVersion;
-    public TMP_Text dynamicTextbox;
-    private Coroutine typingCoroutine;
 
-    public Character(int characterNum)
+    // Initialize character with a number
+    public void Initialize(int characterNum, TMP_Text textbox)
     {
+        Debug.Log($"Initializing character #{characterNum}");
+
         this.characterNum = characterNum;
-        if (characterNum == 1) { charName = "Asher Bertham"; }
-        if (characterNum == 2) { charName = "Paul Daisy"; }
-        if (characterNum == 3) { charName = "Caetlyn Valence"; }
-        if (characterNum == 4) { charName = "Aimee Mainfield"; }
-        if (characterNum == 5) { charName = "Lidia Trelew"; }
-        if (characterNum == 6) { charName = "Sydney Bantam"; }
-        if (characterNum == 7) { charName = "Jenessa Holly"; }
-        if (characterNum == 8) { charName = "Brian Griffith"; }
-        if (characterNum == 9) { charName = "Gerard Guerlaih"; }
+        
+
+        // Set character name
+        switch (characterNum)
+        {
+            case 1:
+                charName = "Asher Bertham";
+                Debug.Log("Character name set to: Asher Bertham");
+                break;
+            case 2:
+                charName = "Paul Daisy";
+                Debug.Log("Character name set to: Paul Daisy");
+                break;
+            case 3:
+                charName = "Caetlyn Valence";
+                Debug.Log("Character name set to: Caetlyn Valence");
+                break;
+            case 4:
+                charName = "Aimee Mainfield";
+                Debug.Log("Character name set to: Aimee Mainfield");
+                break;
+            case 5:
+                charName = "Lidia Trelew";
+                Debug.Log("Character name set to: Lidia Trelew");
+                break;
+            case 6:
+                charName = "Sydney Bantam";
+                Debug.Log("Character name set to: Sydney Bantam");
+                break;
+            case 7:
+                charName = "Jenessa Holly";
+                Debug.Log("Character name set to: Jenessa Holly");
+                break;
+            case 8:
+                charName = "Brian Griffith";
+                Debug.Log("Character name set to: Brian Griffith");
+                break;
+            case 9:
+                charName = "Gerard Guerlaih";
+                Debug.Log("Character name set to: Gerard Guerlaih");
+                break;
+            default:
+                charName = "Unknown";
+                Debug.LogWarning($"Unknown character number: {characterNum}");
+                break;
+        }
 
         System.Random rnd = new System.Random();
-        doppelVersion = rnd.Next(1, 19);
-        // doppvers 1 - 10: normal character
-        // 11: appearance eyes
-        // 12: appearance eyes2
-        // 13: appearance blood
-        // 14: appearance wc
-        // 15: wrong ID
-        // 16: missing ID
-        // 17: personal
-        // 18: alibi
-        // 19: file
-        if (doppelVersion <= 10 || doppelVersion >= 15) { SetAppearanceDefault(characterNum); }
-        if (doppelVersion >= 11 && doppelVersion <= 14) { SetAppearanceDoppel(characterNum, doppelVersion); }
-        if (doppelVersion != 15 && doppelVersion != 16) { SetIDDefault(characterNum); }
-        if (doppelVersion == 15) { SetIDDoppel(characterNum); }
-        if (doppelVersion == 16) { IDImage = null; }
-        if (doppelVersion == 17) { }
-        if (doppelVersion == 18) { }
-        if (doppelVersion == 19) { }
+        doppelVersion = rnd.Next(1, 20); // 1 to 19
+
+        // Appearance
+        if (doppelVersion <= 10)
+        {
+            SetAppearanceDefault(characterNum);
+        }
+        else if (doppelVersion >= 11 && doppelVersion <= 14)
+        {
+            SetAppearanceDoppel(characterNum, doppelVersion);
+        }
+        else
+        {
+            SetAppearanceDefault(characterNum);
+        }
+
+        // ID
+        if (doppelVersion == 15)
+        {
+            SetIDDoppel(characterNum);
+        }
+        else if (doppelVersion == 16)
+        {
+            IDImage = null;
+        }
+        else
+        {
+            SetIDDefault(characterNum);
+        }
     }
 
     public void SetIDDefault(int characterNum)
     {
-        if (characterNum == 1) { IDImage = Resources.Load<Sprite>("abid"); }
-        if (characterNum == 2) { IDImage = Resources.Load<Sprite>("pdid"); }
-        if (characterNum == 3) { IDImage = Resources.Load<Sprite>("cvid"); }
-        if (characterNum == 4) { IDImage = Resources.Load<Sprite>("amid"); }
-        if (characterNum == 5) { IDImage = Resources.Load<Sprite>("ltid"); }
-        if (characterNum == 6) { IDImage = Resources.Load<Sprite>("sbid"); }
-        if (characterNum == 7) { IDImage = Resources.Load<Sprite>("jhid"); }
-        if (characterNum == 8) { IDImage = Resources.Load<Sprite>("bgid"); }
-        if (characterNum == 9) { IDImage = Resources.Load<Sprite>("ggid"); }
+        switch (characterNum)
+        {
+            case 1: IDImage = Resources.Load<Sprite>("abid"); break;
+            case 2: IDImage = Resources.Load<Sprite>("pdid"); break;
+            case 3: IDImage = Resources.Load<Sprite>("cvid"); break;
+            case 4: IDImage = Resources.Load<Sprite>("amid"); break;
+            case 5: IDImage = Resources.Load<Sprite>("ltid"); break;
+            case 6: IDImage = Resources.Load<Sprite>("sbid"); break;
+            case 7: IDImage = Resources.Load<Sprite>("jhid"); break;
+            case 8: IDImage = Resources.Load<Sprite>("bgid"); break;
+            case 9: IDImage = Resources.Load<Sprite>("ggid"); break;
+        }
     }
+
     public void SetIDDoppel(int characterNum)
     {
-        if (characterNum == 1) { IDImage = Resources.Load<Sprite>("abwrongid"); }
-        if (characterNum == 2) { IDImage = Resources.Load<Sprite>("pdwrongid"); }
-        if (characterNum == 3) { IDImage = Resources.Load<Sprite>("cvwrongid"); }
-        if (characterNum == 4) { IDImage = Resources.Load<Sprite>("amwrongid"); }
-        if (characterNum == 5) { IDImage = Resources.Load<Sprite>("ltwrongid"); }
-        if (characterNum == 6) { IDImage = Resources.Load<Sprite>("sbwrongid"); }
-        if (characterNum == 7) { IDImage = Resources.Load<Sprite>("jhwrongid"); }
-        if (characterNum == 8) { IDImage = Resources.Load<Sprite>("bgwrongid"); }
-        if (characterNum == 9) { IDImage = Resources.Load<Sprite>("ggwrongid"); }
+        switch (characterNum)
+        {
+            case 1: IDImage = Resources.Load<Sprite>("abwrongid"); break;
+            case 2: IDImage = Resources.Load<Sprite>("pdwrongid"); break;
+            case 3: IDImage = Resources.Load<Sprite>("cvwrongid"); break;
+            case 4: IDImage = Resources.Load<Sprite>("amwrongid"); break;
+            case 5: IDImage = Resources.Load<Sprite>("ltwrongid"); break;
+            case 6: IDImage = Resources.Load<Sprite>("sbwrongid"); break;
+            case 7: IDImage = Resources.Load<Sprite>("jhwrongid"); break;
+            case 8: IDImage = Resources.Load<Sprite>("bgwrongid"); break;
+            case 9: IDImage = Resources.Load<Sprite>("ggwrongid"); break;
+        }
     }
 
     public void SetAppearanceDefault(int characterNum)
     {
-        if (characterNum == 1) { charImage = Resources.Load<Sprite>("abdefault"); }
-        if (characterNum == 2) { charImage = Resources.Load<Sprite>("pddefault"); }
-        if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvdefault"); }
-        if (characterNum == 4) { charImage = Resources.Load<Sprite>("amdefault"); }
-        if (characterNum == 5) { charImage = Resources.Load<Sprite>("ltdefault"); }
-        if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbdefault"); }
-        if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhdefault"); }
-        if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgdefault"); }
-        if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggdefault"); }
+        switch (characterNum)
+        {
+            case 1: charImage = Resources.Load<Sprite>("abdefault"); break;
+            case 2: charImage = Resources.Load<Sprite>("pddefault"); break;
+            case 3: charImage = Resources.Load<Sprite>("cvdefault"); break;
+            case 4: charImage = Resources.Load<Sprite>("amdefault"); break;
+            case 5: charImage = Resources.Load<Sprite>("ltdefault"); break;
+            case 6: charImage = Resources.Load<Sprite>("sbdefault"); break;
+            case 7: charImage = Resources.Load<Sprite>("jhdefault"); break;
+            case 8: charImage = Resources.Load<Sprite>("bgdefault"); break;
+            case 9: charImage = Resources.Load<Sprite>("ggdefault"); break;
+        }
     }
+
     public void SetAppearanceDoppel(int characterNum, int doppelVersion)
     {
         if (doppelVersion == 11)
         {
-            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abeyes"); }
-            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdeyes"); }
-            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cveyes"); }
-            if (characterNum == 4) { charImage = Resources.Load<Sprite>("ameyes"); }
-            if (characterNum == 5) { charImage = Resources.Load<Sprite>("lteyes"); }
-            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbeyes"); }
-            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jheyes"); }
-            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgeyes"); }
-            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggeyes"); }
+            switch (characterNum)
+            {
+                case 1: charImage = Resources.Load<Sprite>("abeyes"); break;
+                case 2: charImage = Resources.Load<Sprite>("pdeyes"); break;
+                case 3: charImage = Resources.Load<Sprite>("cveyes"); break;
+                case 4: charImage = Resources.Load<Sprite>("ameyes"); break;
+                case 5: charImage = Resources.Load<Sprite>("lteyes"); break;
+                case 6: charImage = Resources.Load<Sprite>("sbeyes"); break;
+                case 7: charImage = Resources.Load<Sprite>("jheyes"); break;
+                case 8: charImage = Resources.Load<Sprite>("bgeyes"); break;
+                case 9: charImage = Resources.Load<Sprite>("ggeyes"); break;
+            }
         }
-        if (doppelVersion == 12)
+        else if (doppelVersion == 12)
         {
-            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abeyes2"); }
-            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdeyes2"); }
-            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cveyes2"); }
-            if (characterNum == 4) { charImage = Resources.Load<Sprite>("ameyes2"); }
-            if (characterNum == 5) { charImage = Resources.Load<Sprite>("lteyes2"); }
-            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbeyes2"); }
-            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jheyes2"); }
-            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgeyes2"); }
-            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggeyes2"); }
-        }
-        if (doppelVersion == 13)
-        {
-            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abblood"); }
-            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdblood"); }
-            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvblood"); }
-            if (characterNum == 4) { charImage = Resources.Load<Sprite>("amblood"); }
-            if (characterNum == 5) { charImage = Resources.Load<Sprite>("ltblood"); }
-            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbblood"); }
-            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhblood"); }
-            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgblood"); }
-            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggblood"); }
-        }
-        if (doppelVersion == 14)
-        {
-            if (characterNum == 1) { charImage = Resources.Load<Sprite>("abwildcard"); }
-            if (characterNum == 2) { charImage = Resources.Load<Sprite>("pdwildcard"); }
-            if (characterNum == 3) { charImage = Resources.Load<Sprite>("cvwildcard"); }
-            if (characterNum == 4) { charImage = Resources.Load<Sprite>("amwildcard"); }
-            if (characterNum == 5) { charImage = Resources.Load<Sprite>("ltwildcard"); }
-            if (characterNum == 6) { charImage = Resources.Load<Sprite>("sbwildcard"); }
-            if (characterNum == 7) { charImage = Resources.Load<Sprite>("jhwildcard"); }
-            if (characterNum == 8) { charImage = Resources.Load<Sprite>("bgwildcard"); }
-            if (characterNum == 9) { charImage = Resources.Load<Sprite>("ggwildcard"); }
-        }
-    }
-    public void UpdateAppearanceText(string text)
-    {
-        if (typingCoroutine != null)
-        {
-            StopCoroutine(typingCoroutine);
-        }
-        typingCoroutine = StartCoroutine(TypeAppearanceText(text));
-    }
-
-    private IEnumerator TypeAppearanceText(string newText)
-    {
-        dynamicTextbox.text = "";
-        newText = changeAppearanceDialogue(doppelVersion);
-        foreach (char letter in newText)
-        {
-            dynamicTextbox.text += letter;
-            yield return new WaitForSeconds(0.05f);
-        }
-        typingCoroutine = null;
-    }
-
-    public string changeAppearanceDialogue(int doppelVersion)
-    {
-        if (doppelVersion == 11 || doppelVersion == 12)
-        {
-            return "Oh, my eyes? I just didn't sleep very well last night.";
+            switch (characterNum)
+            {
+                case 1: charImage = Resources.Load<Sprite>("abeyes2"); break;
+                case 2: charImage = Resources.Load<Sprite>("pdeyes2"); break;
+                case 3: charImage = Resources.Load<Sprite>("cveyes2"); break;
+                case 4: charImage = Resources.Load<Sprite>("ameyes2"); break;
+                case 5: charImage = Resources.Load<Sprite>("lteyes2"); break;
+                case 6: charImage = Resources.Load<Sprite>("sbeyes2"); break;
+                case 7: charImage = Resources.Load<Sprite>("jheyes2"); break;
+                case 8: charImage = Resources.Load<Sprite>("bgeyes2"); break;
+                case 9: charImage = Resources.Load<Sprite>("ggeyes2"); break;
+            }
         }
         else if (doppelVersion == 13)
         {
-            return "Oh, it's all just tomato sauce!";
+            switch (characterNum)
+            {
+                case 1: charImage = Resources.Load<Sprite>("abblood"); break;
+                case 2: charImage = Resources.Load<Sprite>("pdblood"); break;
+                case 3: charImage = Resources.Load<Sprite>("cvblood"); break;
+                case 4: charImage = Resources.Load<Sprite>("amblood"); break;
+                case 5: charImage = Resources.Load<Sprite>("ltblood"); break;
+                case 6: charImage = Resources.Load<Sprite>("sbblood"); break;
+                case 7: charImage = Resources.Load<Sprite>("jhblood"); break;
+                case 8: charImage = Resources.Load<Sprite>("bgblood"); break;
+                case 9: charImage = Resources.Load<Sprite>("ggblood"); break;
+            }
         }
         else if (doppelVersion == 14)
         {
-            return "Uh oh, you caught me. You have to die now.";
-        }
-        else
-        {
-            return "What do you mean? There's nothing wrong with my appearance.";
+            switch (characterNum)
+            {
+                case 1: charImage = Resources.Load<Sprite>("abwildcard"); break;
+                case 2: charImage = Resources.Load<Sprite>("pdwildcard"); break;
+                case 3: charImage = Resources.Load<Sprite>("cvwildcard"); break;
+                case 4: charImage = Resources.Load<Sprite>("amwildcard"); break;
+                case 5: charImage = Resources.Load<Sprite>("ltwildcard"); break;
+                case 6: charImage = Resources.Load<Sprite>("sbwildcard"); break;
+                case 7: charImage = Resources.Load<Sprite>("jhwildcard"); break;
+                case 8: charImage = Resources.Load<Sprite>("bgwildcard"); break;
+                case 9: charImage = Resources.Load<Sprite>("ggwildcard"); break;
+            }
         }
     }
+
+    
 }
+
